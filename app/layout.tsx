@@ -2,6 +2,7 @@ import './globals.css';
 import type { Metadata } from 'next';
 import { Rubik } from 'next/font/google';
 import Link from 'next/link';
+import Navbar from './components/Navbar';
 
 const rubik = Rubik({ subsets: ['latin'] });
 
@@ -17,21 +18,8 @@ export default function RootLayout({
 }) {
   return (
     <html lang='en'>
-      <body className={rubik.className + ` flex flex-col h-screen`}>
-        <nav className='flex justify-between bg-rose-500 text-2xl p-[1em_10vw] text-white'>
-          <Link href='/'>Logo</Link>
-          <ul className='flex gap-4'>
-            <li>
-              <Link href='/'>Home</Link>
-            </li>
-            <li>
-              <Link href='/about'>about</Link>
-            </li>
-            <li>
-              <Link href='/contact'>contact</Link>
-            </li>
-          </ul>
-        </nav>
+      <body className={`${rubik.className} h-screen flex flex-col`}>
+        <Navbar />
         {children}
         <footer className='bg-green-800 text-white text-center p-8'>
           About Page Footer
