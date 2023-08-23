@@ -1,11 +1,7 @@
-import React from 'react';
-
-const HomePage = () => {
+const Home = () => {
   return (
-    <main className='bg-blue-900 text-2xl p-[0_10vw] h-full text-center text-white'>
-      Welcome To Our App
-    </main>
+    <main className='container mx-auto flex justify-center flex-1 '>Home</main>
   );
 };
 
-export default HomePage;
+export default Home;

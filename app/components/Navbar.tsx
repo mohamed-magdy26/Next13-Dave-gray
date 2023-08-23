@@ -1,18 +1,18 @@
 import Link from 'next/link';
-import React from 'react';
+import Search from './Search';
 
-export default function Navbar() {
+type Props = {};
+
+export default function Navbar({}: Props) {
   return (
-    <nav className='flex justify-between bg-rose-500 text-2xl p-[1em_10vw] text-white'>
-      <Link href='/'>Logo</Link>
-      <ul className='flex gap-4'>
-        <li>
-          <Link href='/'>Home</Link>
-        </li>
-        <li>
-          <Link href='/users'>Users</Link>
-        </li>
-      </ul>
+    <nav className='bg-teal-800 p-4 text-teal-50'>
+      <div className='container mx-auto flex justify-between items-center'>
+        <Link className='font-bold text-2xl' href='/'>
+          Logo
+        </Link>
+        {/* Search component */}
+        <Search />
+      </div>
     </nav>
   );
 }

@@ -1,36 +1,20 @@
-interface User {
-  id: number;
-  name: string;
-  username: string;
-  email: string;
-  address: Address;
-  phone: string;
-  website: string;
-  company: Company;
+interface SearchResult {
+  query?: {
+    pages?: Page[];
+  };
 }
 
-interface Company {
-  name: string;
-  catchPhrase: string;
-  bs: string;
+interface Thumbnail {
+  source: string;
+  width: number;
+  height: number;
 }
-
-interface Address {
-  street: string;
-  suite: string;
-  city: string;
-  zipcode: string;
-  geo: Geo;
-}
-
-interface Geo {
-  lat: string;
-  lng: string;
-}
-
-interface UserPost {
-  userId: number;
-  id: number;
+interface Page {
+  pageid: number;
+  ns: number;
   title: string;
-  body: string;
+  index: number;
+  thumbnail: Thumbnail;
+  pageimage: string;
+  extract: string;
 }
